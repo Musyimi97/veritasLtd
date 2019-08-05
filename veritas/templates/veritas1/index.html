@@ -7,7 +7,11 @@
 <!-- Mirrored from demo.w3layouts.com/demos_new/template_demo/14-11-2017/soft-demo_Free/671769136/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Aug 2019 07:40:44 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-	<title>Soft a Human Resource Management Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+	<title>
+	{% block title %}
+	  Veritas Resourcing Limited | Homepage
+	{% endblock title %}
+	</title>
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -90,16 +94,16 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		<div class="content white agile-info">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container">
-					<div class="navbar-header">
+					<div class="navbar-header " >
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-						<a class="navbar-brand" href="index.html">
-							<h1><span class="fa fa-signal" aria-hidden="true"></span> Soft <label>Hr Agency</label></h1>
-						</a>
+				<a class="navbar-brand float-left mt-5" href="index.html">
+					<img src="{% static 'images/logo.png' %}" width="120" height='60' alt="veritas resourcing ltd">
+				  </a>
 					</div>
 					<!--/.navbar-header-->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -155,8 +159,8 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="professional.html" class="effect-3">Professionals</a></li>
 								<li><a href="contact.html" class="effect-3">Contact</a></li>
 							
-								<a href="{% url 'account_login' %}"><button class="btn btn-primary mt-1" >Login</button></a>
-							<a href="{% url 'account_signup' %}"><button class="btn btn-primary mt-3">Sign Up</button></a>
+								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
+							<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
 								
 							</ul>
 							
@@ -267,17 +271,33 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 			<div class="inner_sec_grids_info_w3ls">
 				<div class="col-md-6 banner_bottom_left">
-					<h4>Employment opportunities for <span>Professionals</span></h4>
-					<p>Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget
-						pulvinar neque pharetra ac.</p>
-					<p>Lorem Ipsum convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget
-						pulvinar neque pharetra ac.</p>
-					<ul class="some_agile_facts">
+					<h4><i> Our clients’ success is also our success, that’s why we always ensure to get positive results of our work.</i></h4>
+					<p>We offer total staffing solutions ranging from basic
+							recruitment, hr outsourcing, payroll processing, organizational restructuring, to project management.
+							Our services help organizations acquire the right human assets and 	implement effective processes to ensure organizational
+							objectives are achieved with ease and speed.</p>
+							<p>
+							Veritas Resourcing ltd has a highly skilled, knowledge-
+							able, experienced, diversified, and solid team of compe-
+							tent and experienced hr consulting professionals who
+							provide a hassle-free solution to complex, time consum-
+							ing and -sometimes- political issues affecting your HR
+							processes</p>
+
+							<h2 class="tittle" style="font-size: 20;color: rgb(12, 173, 12);"><b> Our Approach</b></h2>
+							<p>You are not just another client to us.
+									You will have specific requirements that will require a
+									specific and unique solution. You will find that when you
+									partner with Veritas Resourcing it will be as though you
+									are our only client. The level of service that you will receive
+									will only be surpassed by the quality of the solutions that
+									we deliver for you and your company.</p>
+					<!-- <ul class="some_agile_facts">
 						<li><span class="fa fa-briefcase" aria-hidden="true"></span><label>80</label> Corporate Programs</li>
 						<li><span class="fa fa-graduation-cap" aria-hidden="true"></span><label>49</label> Training Courses</li>
 						<li><span class="fa fa-user" aria-hidden="true"></span><label>88</label> Strategic Partners</li>
 						<li><span class="fa fa-line-chart" aria-hidden="true"></span><label>436</label> Companies We Helped</li>
-					</ul>
+					</ul> -->
 					<div class="clearfix"> </div>
 				</div>
 				<div class="col-md-6 banner_bottom_right">
@@ -293,24 +313,34 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	</div>
 	<!-- //banner-bottom -->
 	<div class="team_work_agile">
-		<h4>Whether we play a large or small role, by working together we achieve our objectives.</h4>
+		<h4 style=" font-size:13; color: white">“
+				
+				We want every action to make sense. 
+				Beginning a project we set the expectations and
+				targets to be achieved. We select effective
+				solutions, analyse everything from a wide per-
+				spective and motivate others to do that. We con-
+				stantly develop ourselves and work out the new,
+				effective methods and tools."</h4>
 	</div>
 	<!-- services -->
 	<div class="services" id="services">
 		<div class="container">
 			<div class="tittle_head_w3ls">
-				<h3 class="tittle">Selection Process</h3>
+				<h3 class="tittle">Services</h3>
 			</div>
 			<div class="inner_sec_grids_info_w3ls">
 				<div class="col-md-3 services-left">
 					<div class="services-left-top">
 
-						<h5>Identify Need & Develop Position Description</h5>
+						<h5>Recruitment
+								&
+								Selection</h5>
 
 					</div>
 					<div class="services-left-top services-left-top1">
 
-						<h5>Recruitment Planning</h5>
+						<h5>HR Outsourcing</h5>
 
 					</div>
 				</div>
@@ -322,14 +352,14 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						<div class="col-md-6 services-middle-left">
 							<div class="services-left-top">
 
-								<h5>Sourcing & Advertising</h5>
+								<h5>HR Outsourcing</h5>
 
 							</div>
 						</div>
 						<div class="col-md-6 services-middle-left">
 							<div class="services-left-top">
 
-								<h5>Assess & Interview Candidates</h5>
+								<h5>HR Audits</h5>
 
 							</div>
 						</div>
@@ -339,12 +369,13 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 				<div class="col-md-3 services-left">
 					<div class="services-left-top">
 
-						<h5>Offer for Student Employment</h5>
+						<h5>Performance Management
+								& Organizational Performance</h5>
 
 					</div>
 					<div class="services-left-top services-left-top1">
 
-						<h5>Onboarding for Success</h5>
+						<h5>Learning & Development</h5>
 
 					</div>
 				</div>
@@ -354,7 +385,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	</div>
 	<!-- //services -->
 	<!-- /mid-services -->
-	<div class="mid_services">
+	<!-- <div class="mid_services">
 
 		<div class="col-md-6 according_inner_grids">
 			<h3 class="agile_heading two">Receiving a Job offer</h3>
@@ -431,7 +462,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		<div class="col-md-6 mid_services_img">
 		</div>
 		<div class="clearfix"> </div>
-	</div>
+	</div> -->
 	<!-- //mid-services -->
 	<div class="candidate_cv">
 		<div class="tittle_head_w3ls">
@@ -501,110 +532,64 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 		</div>
 	</div>
-	<!-- //testimonials -->
-	<div class="testimonials_section">
-		<div class="container">
-			<div class="tittle_head_w3ls">
-				<h3 class="tittle">Testimonials</h3>
-			</div>
-			<div class="inner_sec_grids_info_w3ls">
-				<div id="Carousel" class="carousel slide two">
-
-					<ol class="carousel-indicators second">
-						<li data-target="#Carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#Carousel" data-slide-to="1"></li>
-						<li data-target="#Carousel" data-slide-to="2"></li>
-					</ol>
-
-					<!-- Carousel items -->
-					<div class="carousel-inner">
-
-						<div class="item active">
-							<div class="testimonials_grid_wthree">
-								<img src="{% static 'images/test1.jpg' %} " alt=" " class="img-responsive" />
-								<h4><i class="fa fa-quote-left" aria-hidden="true"></i> Nam libero tempore, cum soluta nobis est eligendi optio cumque
-									nihil impedit quo minus id quod maxime placeat facere possimus,Morbi viverra congue nisi vel pulvinar posuere sapien
-									eros. omnis voluptas.</h4>
-								<h5>Dan Adams</h5>
-
-							</div>
-
-						</div>
-						<!--.item-->
-						<div class="item">
-							<div class="testimonials_grid_wthree">
-								<img src="{% static 'images/test2.jpg' %} " alt=" " class="img-responsive" />
-								<h4><i class="fa fa-quote-left" aria-hidden="true"></i> Nam libero tempore, cum soluta nobis est eligendi optio cumque
-									nihil impedit quo minus id quod maxime placeat facere possimus,Morbi viverra congue nisi vel pulvinar posuere sapien
-									eros. omnis voluptas.</h4>
-								<h5>Jessica Doe</h5>
-
-							</div>
-						</div>
-						<!--.item-->
-
-						<div class="item">
-							<div class="testimonials_grid_wthree">
-								<img src="{% static 'images/test3.jpg' %} " alt=" " class="img-responsive" />
-								<h4><i class="fa fa-quote-left" aria-hidden="true"></i> Nam libero tempore, cum soluta nobis est eligendi optio cumque
-									nihil impedit quo minus id quod maxime placeat facere possimus,Morbi viverra congue nisi vel pulvinar posuere sapien
-									eros. omnis voluptas.</h4>
-								<h5>Michael Doe</h5>
-
-							</div>
-						</div>
-						<!--.item-->
-
-					</div>
-					<!--.carousel-inner-->
-
-				</div>
-				<!--.Carousel-->
-
-			</div>
-		</div>
-	</div>
 
 	<!-- footer -->
 	<div class="footer_top_agileits">
 		<div class="container">
-			<div class="col-md-4 footer_grid">
-				<h3>About Us</h3>
-				<p>Nam libero tempore cum vulputate id est id, pretium semper enim. Morbi viverra congue nisi vel pulvinar posuere sapien
-					eros.
-				</p>
-			</div>
-			<div class="col-md-4 footer_grid">
-				<h3>Latest News</h3>
-				<ul class="footer_grid_list">
-					<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						<a href="single.html" >Lorem ipsum neque vulputate </a>
-					</li>
-					<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						<a href="single.html" >Dolor amet sed quam vitae</a>
-					</li>
-					<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						<a href="single.html" >Lorem ipsum neque, vulputate </a>
-					</li>
-					<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						<a href="single.html" >Dolor amet sed quam vitae</a>
-					</li>
-					<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						<a href="single.html" >Lorem ipsum neque, vulputate </a>
-					</li>
-				</ul>
-			</div>
+				<div class="col-md-4 footer_grid">
+						<h3>About Us</h3>
+						<p>
+								Veritas Resourcing Limited is a HR Management 
+								Consulting and Recruitment company in Kenya.
+								We offer total staffing solutions ranging from basic
+								recruitment, hr outsourcing, payroll processing, organiza-
+								tional restructuring, to project management. Our services
+								help organizations acquire the right human assets and
+								implement effective processes to ensure organizational
+								objectives are achieved with ease and speed.
+						</p>
+					</div>
+					<div class="col-md-4 footer_grid">
+							<h3>Why Us?</h3>
+							<ul class="footer_grid_list">
+								<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									<a href="#" >Your solution will be designed and shaped around your exact re-
+											quirements and will be one that fits with your objectives, vision,
+											values, culture and desired outcomes. </a>
+								</li>
+								<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									<a href="#" >We shall help you develop a human resource strategy that links
+											people to performance</a>
+								</li>
+								<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									<a href="#" >Veritas Resourcing ltd Can Help You By Providing You With
+											The HR Consultancy Expertise That You Are Looking For. </a>
+								</li>
+							
+							</ul>
+						</div>
+			
 			<div class="col-md-4 footer_grid">
 				<h3>Contact Info</h3>
 				<ul class="address">
-					<li><i class="fa fa-map-marker" aria-hidden="true"></i>8088 USA, Honey block, <span>New York City.</span></li>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i>+09187 8088 9436</li>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i>
+						Location: &nbsp;&nbsp;&nbsp;
+						<span>
+							4th Floor, Flamingo Towers
+							<br>
+							Mara Road, Upperhill
+							<br>
+							P.O. Box 1403-00100, Nairobi</span>
+						</li>
+					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contact@veritas.ke"> Email:&nbsp;&nbsp;&nbsp; <span>contact@veritas.ke</span></a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>Phone:&nbsp;&nbsp; <span>+254 712 001 913</span> <br>
+						<span>+254 781 007 411</span> <br>
+						<span>+254 412 248 126</span>
+					</li>
 				</ul>
 			</div>
-			<div class="clearfix"> </div>
-			<div class="footer_grids">
-				<div class="col-md-4 footer_grid_left">
+			<br><br>
+			<div class="col-md-4 footer_grid_left">
 					<h3>Sign up for our Newsletter</h3>
 				</div>
 				<div class="col-md-8 footer_grid_right">
@@ -614,8 +599,11 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						<input type="submit" value="Submit">
 					</form>
 				</div>
-				<div class="clearfix"> </div>
+			<div class="col-md-4 footer_grid">
+				
 			</div>
+			<div class="clearfix"> </div>
+			
 		</div>
 	</div>
 	<div class="footer_w3ls">
@@ -623,19 +611,17 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 			<div class="footer_bottom">
 				<div class="col-md-9 footer_bottom_grid">
 					<div class="footer_bottom1">
-						<a href="index.html">
-							<h2><span class="fa fa-signal" aria-hidden="true"></span> Soft <label>Hr Agency</label></h2>
-						</a>
-						<p>© 2017 Soft. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+					
+						<p>© 2019 Veritas. All rights reserved </a></p>
 					</div>
 				</div>
 				<div class="col-md-3 footer_bottom_grid">
-					<h6>Follow Us</h6>
 					<div class="social">
 						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+
+							<li><a href="#"><i class="fa fa-facebook" style=" border-radius: 50%;"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" style=" border-radius: 50%;"></i></a></li>
+
 						</ul>
 					</div>
 				</div>
