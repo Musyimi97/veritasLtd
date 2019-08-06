@@ -20,7 +20,7 @@ body {
        color: #000000;;
    }
    .Services-tab{
-       margin-top:20px;
+       margin-top:10px;
        
    
    }
@@ -36,10 +36,10 @@ body {
      color: #999; 
      background: transparent;
      transition: all ease .5s;
-     border: 1px solid rgba(31,181,172,.9);
+     border: 1px solid  rgba(12, 177, 37, 0.9);
    }
    .folded-corner:hover{
-       background-color: rgba(31,181,172,.9);
+       background-color: rgba(12, 177, 37, 0.9);
    }
    
    /*
