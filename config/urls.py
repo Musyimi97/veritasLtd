@@ -11,8 +11,9 @@ urlpatterns = [
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
     path(
-        "homepage/", TemplateView.as_view(template_name="veritas1/index.html"), name="veritas1"
+        "homepage/", TemplateView.as_view(template_name="veritas1/index.html"), name="homepage"
     ),
+    path(r'^', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management

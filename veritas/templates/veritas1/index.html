@@ -27,9 +27,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 	<!-- ==Bootie Cdn start=== -->
-	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %} "> 
-	<script src="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' %} "></script>
-	<script src="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js' %} "></script>
+	<link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' %} " rel="stylesheet" id="bootstrap-css">
+<script src="{% static '//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' %} "></script>
+<script src="{% static '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js' %} "></script>
 	<!-- ===End==== -->
 	<!--//tags -->
 	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
@@ -109,21 +109,9 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<nav class="link-effect-2" id="link-effect-2">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html" class="effect-3">Home</a></li>
-								<li class="dropdown">
-									<a href="services.html" class="dropdown-toggle effect-3" data-toggle="dropdown">Services <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="services.html">Services 2</a></li>
-										<li class="divider"></li>
-										<li><a href="services.html">Services 3</a></li>
-										<li class="divider"></li>
-										<li><a href="codes.html">Codes</a></li>
-										<li class="divider"></li>
-										<li><a href="icons.html">Icons</a></li>
-										<li class="divider"></li>
-										<li><a href="services.html">One more separated link</a></li>
-									</ul>
-								</li>
+								<li class="active"><a href="{% url 'homepage' %}" class="effect-3">Home</a></li>
+								<li><a href="{% url 'services' %}" class="effect-3">Services</a></li>
+
 								<li class="dropdown">
 									<a href="jobs.html" class="dropdown-toggle effect-3" data-toggle="dropdown">Jobs<b class="caret"></b></a>
 									<ul class="dropdown-menu multi-column columns-2">
