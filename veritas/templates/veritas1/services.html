@@ -101,9 +101,9 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-						<a class="navbar-brand" href="index.html">
-							<h1><span class="fa fa-signal" aria-hidden="true"></span> Soft <label>Hr Agency</label></h1>
-						</a>
+				<a class="navbar-brand float-left mt-5" href="index.html">
+					<img src="{% static 'images/logo.png' %}" width="120" height='60' alt="veritas resourcing ltd">
+				  </a>
 					</div>
 					<!--/.navbar-header-->
 
@@ -147,6 +147,8 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 								<li><a href="professional.html" class="effect-3">Profesionals</a></li>
 								<li><a href="contact.html" class="effect-3">Contact</a></li>
+								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
+								<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
 							</ul>
 						</nav>
 					</div>
@@ -186,112 +188,157 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 			<div class="container">
 				<div class="row">
-				<ul>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab  item">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Services-tab  item">
 						<div class="folded-corner service_tab_1">
 							<div class="text">
-								<i class="fa fa-image fa-5x fa-icon-image"></i>
+								<i class="fa fa-signal fa-5x"></i>
 									<p class="item-title">
-											<h3> Designing</h3>
+											<h3> Recruitment
+												&
+												Selection</h3>
 										</p><!-- /.item-title -->
 								<p>
-									This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
+									Veritas shortlists only the best can-
+									didates because clients want the best.
+									Quite often the best people for these
+									roles are already working. Our head-
+									hunting service benefits management
+									and executive-level candidates looking
+									for their ideal career opportunities as
+									well as Employers using an effective
+									and innovative solution for middle
+									management as well as expert-lev-
+									el direct searches. We take care of
+									our headhunting assignments safely,
+									quickly and cost-effectively.								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
-						<div class="folded-corner service_tab_1">
-							<div class="text">
-								<i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
-									<p class="item-title">
-										<h3> Developing</h3>
-									</p><!-- /.item-title -->
-									<p>
-										This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Services-tab item">
 						<div class="folded-corner service_tab_1">
 							<div class="text">
 								<i class="fa fa-truck fa-5x fa-icon-image"></i>
 									<p class="item-title">
-										<h3> Marketing</h3>
+										<h3> Performance Management
+											& Organizational Performance</h3>
 									</p><!-- /.item-title -->
 								<p>
-									This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
+									A robust performance manage-
+									ment framework ensures all employ-
+									ees are clear on their role and what
+									is expected from them in delivering
+									business goals. An effective perfor-
+									mance management process creates
+									a healthy dialogue between a manag-
+									er and his/ her team member to align
+									goals and review performance on a
+									regular basis.								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Services-tab item">
+						<div class="folded-corner service_tab_1">
+							<div class="text">
+								<i class="fa fa-lightbulb-o fa-5x fa-icon-image" ></i>
+									<p class="item-title">
+										<h3> Learning & Development </h3>
+									</p><!-- /.item-title -->
+									<p>
+										An effective approach to learning
+										and development can help your or-
+										ganization to enhance performance
+										by maximizing the potential of each
+										individual. Developing an individuals’
+										skills, knowledge and attitude can
+										drive changes in behaviour which can
+										result in improved individual perfor-
+										mance which in turn can contribute to
+										the performance of your organization.							</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Services-tab item">
 						<div class="folded-corner service_tab_1">
 							<div class="text">
 								<i class="fa fa-diamond fa-5x fa-icon-image"></i>
 									<p class="item-title">
-										<h3> Branding</h3>
+										<h3> Support</h3>
 									</p><!-- /.item-title -->
 								<p>
-									This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
+									Our highly skilled and experienced con-
+									sultants will make the difference to your
+									company.
+									Our consultants have the miles on the
+									clock to provide proven, workable and ef-
+									fective solutions. We believe in investing
+									heavily in our consultants skills and knowl-
+									edge to ensure that you receive the very
+									latest and up to date information and tech-
+									niques for your HR solution.								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 Services-tab item">
 						<div class="folded-corner service_tab_1">
-						<div class="text">
-							<i class="fa fa-line-chart fa-5x fa-icon-image"></i>
-								<p class="item-title">
-									<h3>Analytics</h3>
-								</p><!-- /.item-title -->
+							<div class="text">
+								<i class="fa fa-diamond fa-5x fa-icon-image"></i>
+									<p class="item-title">
+										<h3> HR Audits</h3>
+									</p><!-- /.item-title -->
 								<p>
-									This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
+									Our team of experts will help you
+									carry out HR audits to pinpoint the
+									gaps between “what is” and “what
+									should be” or “what could be”. By re-
+									moving and reducing the size of the
+									gaps, your organization can increase
+									legal compliance, ensure confor-
+									mance to established professional
+									standards, and/ or contribute to the
+									quality improvement process.								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+				
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Services-tab item">
 						<div class="folded-corner service_tab_1">
 							<div class="text">
 								<i class="fa fa-mobile fa-5x fa-icon-image"></i>
 									<p class="item-title">
-										<h3>Mobil Apps</h3>
+										<h3> HR Outsourcing</h3>
 									</p><!-- /.item-title -->
 								<p>
-									This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
+									Outsourcing Human Resource
+									services is a cost-effective way of
+									ensuring that your HR needs are met
+									and allows you to free up resources to
+									focus on other core areas of your busi-
+									ness. When you Outsource Human
+									Resource to us you can enjoy benefits,
+									such as increased efficiency and ac-
+									cess to expertise.								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Services-tab item">
 							<div class="folded-corner service_tab_1">
 								<div class="text">
 									<i class="fa fa-money fa-5x fa-icon-image"></i>
 										<p class="item-title">
-											<h3> e-commerce</h3>
+											<h3> Job Evaluation</h3>
 										</p><!-- /.item-title -->
 									<p>
-										This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-									</p>
+										Job evaluation and job grading is a
+										systematic process which helps to de-
+										termine the size and value or worth of
+										job roles in relation to other jobs roles
+										in the organisation. Job evaluation and
+										grading helps us to compare job roles
+										internally and externally.									</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
-						<div class="folded-corner service_tab_1">
-							<div class="text">
-								<i class="fa fa-bullhorn fa-5x fa-icon-image"></i>
-									<p class="item-title">
-										<h3> Support</h3>
-									</p><!-- /.item-title -->
-								<p>
-									This is an amazing set of animated accordions based completely on CSS. They come oriented both vertically and horizontally in order to fit properly in your project. In order to see the slides, 
-								</p>
-							</div>
-						</div>
-					</div>
-				   </ul>
+					
 				</div>
 			</div>
 			<!---728x90--->
