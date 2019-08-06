@@ -9,7 +9,7 @@
 <head>
 	<title>
 	{% block title %}
-	  Veritas Resourcing Limited | Services
+	Services | Veritas Resourcing Limited 
 	{% endblock title %}
 	</title>
 	<!--/tags -->
@@ -146,7 +146,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="events.html" class="effect-3">Events</a></li>
 
 								<li><a href="professional.html" class="effect-3">Profesionals</a></li>
-								<li><a href="contact.html" class="effect-3">Contact</a></li>
+								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
 								<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
 							</ul>

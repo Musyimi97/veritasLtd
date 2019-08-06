@@ -9,7 +9,7 @@
 <head>
 	<title>
 	{% block title %}
-	  Veritas Resourcing Limited | Homepage
+	 Home | Veritas Resourcing Limited
 	{% endblock title %}
 	</title>
 	<!--/tags -->
@@ -101,7 +101,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand float-left mt-5" href="index.html">
+				<a class="navbar-brand float-left mt-5" href="{% url 'homepage' %}">
 					<img src="{% static 'images/logo.png' %}" width="120" height='60' alt="veritas resourcing ltd">
 				  </a>
 					</div>
@@ -145,7 +145,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="events.html" class="effect-3">Events</a></li>
 
 								<li><a href="professional.html" class="effect-3">Professionals</a></li>
-								<li><a href="contact.html" class="effect-3">Contact</a></li>
+								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 							
 								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
 							<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
