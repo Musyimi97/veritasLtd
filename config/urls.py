@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from blog.views import PostDetail, PostList
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -15,6 +16,8 @@ urlpatterns = [
     ),
     path(r'^/services', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
     path(r'^/contacts', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
+    path('post/', PostList.as_view(), name='post_list'),
+    path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
 
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
