@@ -7,6 +7,9 @@ from django.views import defaults as default_views
 from blog.views import PostDetail, PostList
 
 urlpatterns = [
+
+    # Django Admin, use {% url 'admin:index' %}
+    path(settings.ADMIN_URL, admin.site.urls),
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
@@ -19,8 +22,6 @@ urlpatterns = [
     path('post/', PostList.as_view(), name='post_list'),
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
 
-    # Django Admin, use {% url 'admin:index' %}
-    path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("veritas.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
