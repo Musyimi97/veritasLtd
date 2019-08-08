@@ -188,30 +188,32 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 				<h3 class="tittle">Our Events</h3>
 			</div>
 			<!---728x90--->
-
+			<div class="container">
+				<div class="row">
+					<!-- Blog Entries Column -->
+					<div class="col-md-8 mt-3 left">
+						{% for post in post_list %}
+						<div class="card mb-4 col-md-8">
+							<div class="card-body">
+								<!-- <a href="single.html" ><img src="{{ post.cover.url}}" alt="{{ post.title }}"></a> -->
+								<h2 class="card-title">{{ post.title }}</h2>
+								<p class="card-text text-muted h6">{{ post.Author }} | {{ post.created_on}} </p>
+								<p class="card-text">{{post.content|slice:":200" }}</p>
+								<a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
 			<div class="inner_sec_grids_info_w3ls">
 				
-				
-			{% for post in post_list %}
-			  
 			
-				<div class="col-md-4 blog-grid lost">
-					<a href="single.html"><img src="{{ post.cover.url}}" alt="{{ post.title }}"></a>
-					<div class="events_info">
-						<h5>{{ post.Author }} | {{ post.created_on}}</h5>
-						<h4><a href="single.html">{{ post.title }}</a></h4>
-						<p class="card-text">{{post.content|slice:":200" }}</p>
-						<a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
-				</div>
-				{% endfor %}
-				
-				<div class="clearfix"></div>
-
-			</div>
 			<!---728x90--->
 
 
 		</div>
+	</div>
 	</div>
 	<!-- //mid-services -->
 
