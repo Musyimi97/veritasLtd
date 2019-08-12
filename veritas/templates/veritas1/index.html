@@ -147,7 +147,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="professional.html" class="effect-3">Professionals</a></li>
 								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 								{% if request.user.is_authenticated %}
-								<a href="{% url 'account_logout' %}"><button class="btn btn-danger">Logout</button></a>
+							
 
 								{% else %}
 								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
