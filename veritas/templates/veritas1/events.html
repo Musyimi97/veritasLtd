@@ -147,8 +147,29 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="professional.html" class="effect-3">Professionals</a></li>
 								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 							
-								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
-							<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
+								{% if request.user.is_authenticated %}
+								<div class="pull-right">
+									<ul class="nav pull-right">
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, {{user.username}} <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><a href="{% url 'users:detail' request.user.username %}"><i class="fa fa-user"></i>My Profile</a></li>
+												<li class="divider"></li>
+												<li><a href="{% url 'account_logout' %}"><i class="fa fa-power-off"></i> Logout</a></li>
+											</ul>
+										</li>
+									</ul>
+								  </div>
+
+
+								{% else %}
+								<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_signup' %}" class="nav-link" title="settings">sign up</a></li>
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_login' %}" class="nav-link" title="settings">login</a></li>
+
+								
+								</ul>
+								  
+								{% endif %}
 								
 							</ul>
 							
@@ -188,6 +209,20 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 				<h3 class="tittle">Our Events</h3>
 			</div>
 			<!---728x90--->
+			<div class="col_3 permit">
+				<h3>Jobs by Category</h3>
+				<ul class="list_2">
+					<li><a href="#">Railway Recruitment</a></li>
+					<li><a href="#">Air Force Jobs</a></li>
+					<li><a href="#">Police Jobs</a></li>
+					<li><a href="#">Intelligence Bureau Jobs</a></li>
+					<li><a href="#">Army Jobs</a></li>
+					<li><a href="#">Navy Jobs</a></li>
+					<li><a href="#">BSNL Jobs</a></li>
+					<li><a href="#">Software Jobs</a></li>
+					<li><a href="#">Research Jobs</a></li>
+				</ul>
+			</div>
 			<div class="container">
 				<div class="row">
 					<!-- Blog Entries Column -->
@@ -206,7 +241,6 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					</div>
 				</div>
 			</div>
-			<div class="inner_sec_grids_info_w3ls">
 				
 			
 			<!---728x90--->

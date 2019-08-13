@@ -147,54 +147,26 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="professional.html" class="effect-3">Professionals</a></li>
 								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 								{% if request.user.is_authenticated %}
-								<ul class="nav navbar-nav navbar-right">
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-												<span class="glyphicon glyphicon-user"></span> 
-												<strong>{{user.username}}</strong>
-												<span class="glyphicon glyphicon-chevron-down"></span>
-											</a>
+								<div class="pull-right">
+									<ul class="nav pull-right">
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, {{user.username}} <b class="caret"></b></a>
 											<ul class="dropdown-menu">
-												<li>
-													<div class="navbar-login">
-														<div class="row">
-															<div class="col-lg-4">
-																<p class="text-center">
-																	<span class="glyphicon glyphicon-user icon-size"></span>
-																</p>
-															</div>
-															<div class="col-lg-8">
-																<p class="text-left"><strong>{{user.username}}</strong></p>
-																<p class="text-left small">{{user.email}}</p>
-																<p>
-																	<a href="{% url 'users:detail' request.user.username  %}" class="btn btn-success btn-block">My Profile</a>
-																</p>
-															</div>
-														</div>
-													</div>
-												</li>
+												<li><a href="{% url 'users:detail' request.user.username %}"><i class="fa fa-user"></i>My Profile</a></li>
 												<li class="divider"></li>
-												<li>
-													<div class="navbar-login navbar-login-session">
-														<div class="row">
-															<div class="col-lg-12">
-																<p>
-																	<a href="{% url 'account_logout' %}" class="btn btn-success btn-block">Log Out</a>
-																</p>
-															</div>
-																
-															
-														</div>
-													</div>
-												</li>
+												<li><a href="{% url 'account_logout' %}"><i class="fa fa-power-off"></i> Logout</a></li>
 											</ul>
 										</li>
 									</ul>
+								  </div>
 
 
 								{% else %}
-								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
-								<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
+								<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_signup' %}" class="nav-link" title="settings">sign up</a></li>
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_login' %}" class="nav-link" title="settings">login</a></li>
+
+								
+								</ul>
 								  
 								{% endif %}
 								

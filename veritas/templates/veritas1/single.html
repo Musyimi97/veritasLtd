@@ -147,8 +147,29 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="professional.html" class="effect-3">Professionals</a></li>
 								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 							
-								<a href="{% url 'account_login' %}"><button class="btn btn-success mt-1" >Login</button></a>
-							<a href="{% url 'account_signup' %}"><button class="btn btn- mt-3">Sign Up</button></a>
+								{% if request.user.is_authenticated %}
+								<div class="pull-right">
+									<ul class="nav pull-right">
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, {{user.username}} <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><a href="{% url 'users:detail' request.user.username %}"><i class="fa fa-user"></i>My Profile</a></li>
+												<li class="divider"></li>
+												<li><a href="{% url 'account_logout' %}"><i class="fa fa-power-off"></i> Logout</a></li>
+											</ul>
+										</li>
+									</ul>
+								  </div>
+
+
+								{% else %}
+								<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_signup' %}" class="nav-link" title="settings">sign up</a></li>
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_login' %}" class="nav-link" title="settings">login</a></li>
+
+								
+								</ul>
+								  
+								{% endif %}
 								
 							</ul>
 							
