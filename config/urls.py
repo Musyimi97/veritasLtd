@@ -21,6 +21,7 @@ urlpatterns = [
     path('contacts/', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
     path('post/', PostList.as_view(), name='post_list'),
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
+    path('home/upload/', TemplateView.as_view(template_name='veritas1/upload.html'))
 
     # User management
     path("users/", include("veritas.users.urls", namespace="users")),
