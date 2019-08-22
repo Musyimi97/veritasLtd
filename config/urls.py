@@ -10,15 +10,15 @@ urlpatterns = [
 
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
-    path("/home", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("home/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
     path(
         "", TemplateView.as_view(template_name="veritas1/index.html"), name="homepage"
     ),
-    path(r'^/services', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
-    path(r'^/contacts', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
+    path('services/', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
+    path('contacts/', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
     path('post/', PostList.as_view(), name='post_list'),
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
 
