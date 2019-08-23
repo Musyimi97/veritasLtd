@@ -7,7 +7,7 @@ STATUS = (
     (1,"Publish")
 )
 J
-class Post(models.Model):
+class Jobs(models.Model):
     CHOICES = [
         (0, 'Walk-ins'),
         (1, 'BPO jobs'),
@@ -22,11 +22,10 @@ class Post(models.Model):
         (10, 'Research jobs'),
         (11, 'Security jobs'),
     ],
-    jobs = models.CharField(max_length=50, choices=CHOICES)
+    jobs = models.CharField(max_length=1, choices=CHOICES)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
-    cover = models.ImageField(upload_to='images/', default='')
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
