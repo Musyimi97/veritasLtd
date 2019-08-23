@@ -30,6 +30,7 @@ class Jobs(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    location =models.CharField(max_length=50, default='Nairobi')
 
     class Meta:
         ordering = ['-created_on']
