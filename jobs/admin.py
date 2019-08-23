@@ -6,4 +6,4 @@ class JobsAdmin(admin.ModelAdmin):
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
 
-admin.site.register(Post, PostAdmin)
+admin.site.register(Jobs, JobsAdmin)
