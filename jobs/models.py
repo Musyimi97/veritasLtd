@@ -6,7 +6,7 @@ STATUS = (
     (0,"Draft"),
     (1,"Publish")
 )
-J
+
 class Jobs(models.Model):
     CHOICES = [
         (0, 'Walk-ins'),
@@ -22,7 +22,7 @@ class Jobs(models.Model):
         (10, 'Research jobs'),
         (11, 'Security jobs'),
     ],
-    jobs = models.CharField(max_length=1, choices=CHOICES)
+    jobs = models.IntegerField(choices=CHOICES, default=5)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
