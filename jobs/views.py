@@ -7,4 +7,4 @@ class JobsList(generic.ListView):
 
 class JobsDetail(generic.DetailView):
     model = Jobs
-    template_name = 'veritas1/location_single.html'
+    template_name = 'veritas1/jobs_details.html'

@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from blog.views import PostDetail, PostList
+from jobs.views import JobsDetail, JobsList
 
 urlpatterns = [
 
@@ -23,7 +24,9 @@ urlpatterns = [
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
     path('home/upload/', TemplateView.as_view(template_name='veritas1/upload.html'), name='upload'),
     path('login/', TemplateView.as_view(template_name='veritas1/login.html'), name='login_custom'),
-    path('jobs',TemplateView.as_view(template_name='veritas1/jobs.html'),name='jobs' ),
+    path('jobs',JobsList.as_view(),name='jobs' ),
+    path('<slug:slug>/', JobsDetail.as_view(), name='jobs_detail'),
+
 
     # User management
     path("users/", include("veritas.users.urls", namespace="users")),
