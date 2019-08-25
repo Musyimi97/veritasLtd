@@ -217,17 +217,16 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 			<!---728x90--->
 
 			<div class="inner_sec_grids_info_w3ls">
-				<div class="col-md-8 job_info_left">
+				<div class="col-sm-10 job_info_left">
 					<div class="but_list">
 						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 							<ul id="myTab" class="nav nav-tabs" role="tablist">
 								<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Top Locations</a></li>
-								<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Show Descriptions</a></li>
 							</ul>
 							<div id="myTabContent" class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
+										<div class="col-sm-9 loc_1">
 											<a href="location_single.html"><img src="images/loc1.jpg" alt=""></a>
 										</div>
 								
@@ -236,7 +235,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 										{% for jobs in jobs_list  %}
 										
 
-										<div class="col-sm-9">
+										<div class="col-sm-9 center-block">
 											<div class="location_box1">
 												<h6><a href="location_single.html">{{ jobs.title }}</a> <br><span class="m_1">{{ jobs.created_on }}</span></h6>
 												<p><span class="m_2">{{ jobs.location }} <br> </span>{{jobs.content|slice:":200"}} </p>
@@ -398,27 +397,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 job_info_right">
-
-
-				<div class="col_3 permit">
-					<h3>Jobs by Category</h3>
-					<ul class="list_2">
-						<li><a href="#">Railway Recruitment</a></li>
-						<li><a href="#">Air Force Jobs</a></li>
-						<li><a href="#">Police Jobs</a></li>
-						<li><a href="#">Intelligence Bureau Jobs</a></li>
-						<li><a href="#">Army Jobs</a></li>
-						<li><a href="#">Navy Jobs</a></li>
-						<li><a href="#">BSNL Jobs</a></li>
-						<li><a href="#">Software Jobs</a></li>
-						<li><a href="#">Research Jobs</a></li>
-					</ul>
-				</div>
-
-
-
-			</div>
+		
 			<div class="clearfix"></div>
 			<!---728x90--->
 
