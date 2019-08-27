@@ -7,4 +7,4 @@ class ApplicationForm (forms.ModelForm):
         managed = True
         verbose_name = 'Applications'
         verbose_name_plural = 'Applications'
-        fields=('name','email', 'phone', 'status', 'resume')
+        fields=('name','email_details', 'phone','resume')

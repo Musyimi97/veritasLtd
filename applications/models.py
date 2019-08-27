@@ -12,8 +12,8 @@ class Applications(models.Model):
 
     name=models.CharField( max_length=50)
     email_details=models.EmailField( max_length=254)
-    phone=models.PhoneNumberField(default=+254)
-    status=models.CharField(max_length=50, choices=CHOICES, default='Unemployed'),
+    phone=models.CharField(max_length=50)
+    history=models.CharField(max_length=50, choices=CHOICES, default='Unemployed'),
     resume=models.FileField( upload_to='documents/%Y/%m/%d/', max_length=100)
     uploaded_at=models.DateTimeField(auto_now_add=True)
     

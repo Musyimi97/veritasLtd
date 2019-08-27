@@ -22,7 +22,6 @@ urlpatterns = [
     path('contacts/', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
     path('post/', PostList.as_view(), name='post_list'),
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
-    path('home/upload/', TemplateView.as_view(template_name='veritas1/upload.html'), name='upload'),
     path('login/', TemplateView.as_view(template_name='veritas1/login.html'), name='login_custom'),
     path('jobs',JobsList.as_view(),name='jobs' ),
     path('<slug:slug>/', JobsDetail.as_view(), name='jobs_detail'),
