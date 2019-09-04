@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from blog.views import PostDetail, PostList
 from jobs.views import JobsDetail, JobsList
+from applications.views import model_form_upload
 
 urlpatterns = [
 
@@ -30,7 +31,7 @@ urlpatterns = [
     # User management
     path("users/", include("veritas.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    path('applications/', include("applications.urls")),
+    path('resume/', include('applications.urls')),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

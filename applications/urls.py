@@ -1,6 +1,6 @@
 from django.urls import path,include
-from .views import model_form_upload
+from .views import model_form_upload, upload
 
 urlpatterns = [
-    path('applications/', model_form_upload, name='applications')
+    path('resume/application/', views.upload, name='resume')
 ]
