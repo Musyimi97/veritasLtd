@@ -5,17 +5,6 @@ from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 
-def model_form_upload(request):
-    if request.method == 'POST':
-        form = ApplicationForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('homepage')
-    else:
-        form = ApplicationForm()
-    return render(request, 'veritas1/upload.html', {
-        'form': form
-    })
 
 def upload (request):
     context = {}

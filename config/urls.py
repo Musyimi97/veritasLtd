@@ -6,7 +6,6 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from blog.views import PostDetail, PostList
 from jobs.views import JobsDetail, JobsList
-from applications.views import model_form_upload
 
 urlpatterns = [
 
@@ -19,19 +18,22 @@ urlpatterns = [
     path(
         "", TemplateView.as_view(template_name="veritas1/index.html"), name="homepage"
     ),
+    path('resume/', include('applications.urls')),
+    path('jobs',JobsList.as_view(),name='jobs' ),
+    path('<slug:slug>/', JobsDetail.as_view(), name='jobs_detail'),
+
+
+
     path('services/', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
     path('contacts/', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
     path('post/', PostList.as_view(), name='post_list'),
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
     path('login/', TemplateView.as_view(template_name='veritas1/login.html'), name='login_custom'),
-    path('jobs',JobsList.as_view(),name='jobs' ),
-    path('<slug:slug>/', JobsDetail.as_view(), name='jobs_detail'),
 
 
     # User management
     path("users/", include("veritas.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    path('resume/', include('applications.urls')),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
