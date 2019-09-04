@@ -1,7 +1,18 @@
 from django import forms
 from .models import Applications
+  
+     
 
+    
 class ApplicationForm (forms.ModelForm):
+    CHOICES=[
+         ("EMPLOYED", 'employed'),
+         ("SELF_EMPLOYED", 'self_employed'),
+         ("UNEMPLOYED", "unemployed"),
+         ("STUDENT", 'student'),
+          ]
+
+    history=forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect)
     class Meta:
         model=Applications
         managed = True

@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 class Applications(models.Model):
     CHOICES=(
-        ("EMPLOYED", 'Employed'),
-        ("SELF_EMPLOYED", 'Self_employed'),
-        ("UNEMPLOYED", "Unemployed"),
-        ("STUDENT", 'Student'),
+        ("EMPLOYED", 'employed'),
+        ("SELF_EMPLOYED", 'self_employed'),
+        ("UNEMPLOYED", "unemployed"),
+        ("STUDENT", 'student'),
 
     )
 

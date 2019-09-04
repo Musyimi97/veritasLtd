@@ -14,3 +14,17 @@ def upload (request):
         name= fs.save(uploaded_file.name, uploaded_file)
         context['url'] = fs.url(name)
     return render (request, 'veritas1/upload.html', context)
+
+
+def upload_book(request):
+    if request.method =='POST':
+        form=ApplicationForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('jobs')
+        else:
+            form=ApplicationForm()
+    return render(request, 'veritas1/upload.html',{
+        'form':form
+    })
+    
