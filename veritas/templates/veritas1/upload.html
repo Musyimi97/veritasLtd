@@ -232,21 +232,14 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		<div class="inner_sec_grids_info login-form">
 			<form action="#" method="post">
 				<div class="col-md-6 form-left">
-					<div class="form-inputs email">
-						<p>Full name</p>
-						<i class="fa fa-user" aria-hidden="true"></i>
-						<input type="text" name="Name" placeholder="John Doe" required="" />
-					</div>
-					<div class="form-inputs name">
-						<p>Email</p>
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						<input type="email" name="Email" placeholder="" required="" />
-					</div>
-					<div class="form-inputs name">
-						<p>Phone</p>
-						<i class="fa fa-phone" aria-hidden="true"></i>
-						<input type="text" name="Phone" placeholder="" required="" />
-					</div>
+					<form action="post" method="POST">
+						{% csrf_token %}
+						{{form.as_p}}
+
+						<div class="form-actions">
+							<button type="submit">Send</button>
+						  </div>
+					</form>
 
 				</div>
 				<div class="col-md-6 form-right">

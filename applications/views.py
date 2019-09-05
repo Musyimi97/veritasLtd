@@ -21,7 +21,7 @@ def emailView(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
-    return render(request, "email.html", {'form': form})
+    return render(request, "veritas1/upload.html", {'form': form})
 
 
 def successView(request):

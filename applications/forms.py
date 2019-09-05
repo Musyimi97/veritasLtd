@@ -11,9 +11,9 @@ class ResumeForm(forms.Form):
     name=forms.CharField(required=True),
     from_email=forms.EmailField(required=True),
     experience= forms.ChoiceField(required=False, 
-    widgets=forms.RadioSelect,
+    widget=forms.RadioSelect,
     choices=EXPERIENCE_CHOICES,
     )
-    attach=forms.FileField(widgets=forms.FileInput),    
+    attach=forms.FileField(widget=forms.FileInput),    
 
 
