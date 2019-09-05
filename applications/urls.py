@@ -1,5 +1,6 @@
 from django.urls import path,include
-from applications import views
+from .views import emailView, successView
 urlpatterns = [
-    path('', views.upload, name='resume')
+    path('email/', emailView, name='email'),
+    path('success/', successView, name='success')
 ]

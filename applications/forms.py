@@ -1,21 +1,19 @@
 from django import forms
-from .models import Applications
   
-     
+class ResumeForm(forms.Form):
+    EXPERIENCE_CHOICES=[
+        ('0', '0'),
+        ('2', '2'), 
+        ('3', '3'),
+        ('more than 3', 'MORE THAN 3')
+    ]
 
-    
-class ApplicationForm (forms.ModelForm):
-    CHOICES=[
-         ("EMPLOYED", 'employed'),
-         ("SELF_EMPLOYED", 'self_employed'),
-         ("UNEMPLOYED", "unemployed"),
-         ("STUDENT", 'student'),
-          ]
+    name=forms.CharField(required=True),
+    from_email=forms.EmailField(required=True),
+    experience= forms.ChoiceField(required=False, 
+    widgets=forms.RadioSelect,
+    choices=EXPERIENCE_CHOICES,
+    )
+    attach=forms.FileField(widgets=forms.FileInput),    
 
-    history=forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect)
-    class Meta:
-        model=Applications
-        managed = True
-        verbose_name = 'Applications'
-        verbose_name_plural = 'Applications'
-        fields=('name','email_details', 'phone','resume')
+

@@ -1,30 +1,32 @@
 from django.shortcuts import render,redirect
-from .forms import ApplicationForm
-from .models import Applications
-from django.core.files.storage import FileSystemStorage
+from .forms import ResumeForm
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+
+
 # Create your views here.
 
-
-
-def upload (request):
-    context = {}
-    if request.method == 'POST':
-        uploaded_file=request.FILES['document']
-        fs = FileSystemStorage()
-        name= fs.save(uploaded_file.name, uploaded_file)
-        context['url'] = fs.url(name)
-    return render (request, 'veritas1/upload.html', context)
-
-
-def upload_book(request):
-    if request.method =='POST':
-        form=ApplicationForm(request.POST, request.FILES)
+def emailView(request):
+    if request.method == 'GET':
+            form = ResumeForm()
+    else:
+        form = ResumeForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('jobs')
-        else:
-            form=ApplicationForm()
-    return render(request, 'veritas1/upload.html',{
-        'form':form
-    })
+            experience = form.cleaned_data['experience']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            attach = request.FILES['attach']
+            try:
+                send_mail(experience, message, from_email, attach,  ['admin@example.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('success')
+    return render(request, "email.html", {'form': form})
+
+
+def successView(request):
+   return HttpResponse('Success! Thank you for your message.')
+
+
+
     
