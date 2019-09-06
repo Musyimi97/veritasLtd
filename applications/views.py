@@ -10,7 +10,7 @@ def emailView(request):
     if request.method == 'GET':
             form = ResumeForm()
     else:
-        form = ResumeForm(request.POST)
+        form = ResumeForm(request.POST, request.FILES)
         if form.is_valid():
             experience = form.cleaned_data['experience']
             from_email = form.cleaned_data['from_email']

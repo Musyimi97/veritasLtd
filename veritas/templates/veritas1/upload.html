@@ -230,11 +230,13 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		<!---728x90--->
 
 		<div class="inner_sec_grids_info login-form">
-			<form action="#" method="post">
 				<div class="col-md-6 form-left">
 					<form action="post" method="POST">
 						{% csrf_token %}
-						{{form.as_p}}
+						{{form.name}}
+						{{form.experience}}
+						{{form.from_email}}
+						{{form.attach}}
 
 						<div class="form-actions">
 							<button type="submit">Send</button>
@@ -242,47 +244,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					</form>
 
 				</div>
-				<div class="col-md-6 form-right">
-					<div class="form-inputs name">
-						<p>Comment</p>
-						<i class="fa fa-comment" aria-hidden="true"></i>
-						<textarea name="Message" placeholder="" required=""></textarea>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-				<div class="form-inputs">
-					<p>Specify your current employment status</p>
-					<ul>
-						<li>
-							<input type="radio" id="a-option" name="selector1">
-							<label for="a-option"> </label>
-							<div class="check"></div>
-						</li>
-						<li>
-							<input type="radio" id="b-option" name="selector1">
-							<label for="b-option">Unemployed</label>
-							<div class="check"></div>
-						</li>
-						<li>
-							<input type="radio" id="c-option" name="selector1">
-							<label for="c-option">Self-Employed</label>
-							<div class="check"></div>
-						</li>
-						<li>
-							<input type="radio" id="d-option" name="selector1">
-							<label for="d-option">Student</label>
-							<div class="check"></div>
-						</li>
-					</ul>
-					<div class="clearfix"></div>
-				</div>
-				<div class="form-inputs upload">
-					<p>Upload your resume</p>
-					<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
-					<div id="filedrag">Upload</div>
-				</div>
-				<input type="submit" value="Submit Cv">
-			</form>
+			
 
 		</div>
 	</div>
