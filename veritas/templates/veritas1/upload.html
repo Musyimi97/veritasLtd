@@ -230,10 +230,10 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		<!---728x90--->
 
 		<div class="inner_sec_grids_info login-form">
-				<div class="col-md-6 form-left">
+				<div class="col-md-6 form-center" style=''>
 					<!-- templates/email.html -->
 <h1>Contact Us</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <div class="form-actions">
