@@ -1,4 +1,6 @@
 {% load static %}
+{% load crispy_forms_tags %}
+
 
 <!DOCTYPE html>
 <html>
@@ -228,21 +230,21 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 			<h3 class="tittle two">Candidate Cv</h3>
 		</div>
 		<!---728x90--->
+			<h1>Contact Us</h1>
+					<form method="post"  class='col-sm-6' style="margin-left:10px; margin-right:10px; padding:0 10px 0 10px">
+					    {% csrf_token %}
+					    {{ form | crispy}}
+					    <div class="form-actions">
+					      <button type="submit">Send</button>
+					    </div>
+					</form>
 
 		<div class="inner_sec_grids_info login-form">
 				<div class="col-md-6 form-center" style=''>
-					<!-- templates/email.html -->
-<h1>Contact Us</h1>
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="form-actions">
-      <button type="submit">Send</button>
-    </div>
-</form>
+
+				
 
 				</div>
-			
 
 		</div>
 	</div>
