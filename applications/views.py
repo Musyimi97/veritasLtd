@@ -1,32 +1,23 @@
-from django.shortcuts import render,redirect
-from .forms import ResumeForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-
-
-# Create your views here.
+from django.shortcuts import render, redirect
+from .forms import ContactForm
 
 def emailView(request):
     if request.method == 'GET':
-            form = ResumeForm()
+        form = ContactForm()
     else:
-        form = ResumeForm(request.POST, request.FILES)
+        form = ContactForm(request.POST)
         if form.is_valid():
-            experience = form.cleaned_data['experience']
+            subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
-            attach = request.FILES['attach']
             try:
-                send_mail(experience, message, from_email, attach,  ['admin@example.com'])
+                send_mail(subject, message, from_email, ['admin@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
-    return render(request, "veritas1/upload.html", {'form': form})
-
+    return render(request, "upload.html", {'form': form})
 
 def successView(request):
-   return HttpResponse('Success! Thank you for your message.')
-
-
-
-    
+    return HttpResponse('Success! Thank you for your message.')

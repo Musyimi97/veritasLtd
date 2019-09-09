@@ -231,17 +231,15 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 		<div class="inner_sec_grids_info login-form">
 				<div class="col-md-6 form-left">
-					<form action="post" method="POST">
-						{% csrf_token %}
-						{{form.name}}
-						{{form.experience}}
-						{{form.from_email}}
-						{{form.attach}}
-
-						<div class="form-actions">
-							<button type="submit">Send</button>
-						  </div>
-					</form>
+					<!-- templates/email.html -->
+<h1>Contact Us</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
 
 				</div>
 			

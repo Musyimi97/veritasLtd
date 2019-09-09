@@ -4,14 +4,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
-from blog.views import PostDetail, PostList
-from jobs.views import JobsDetail, JobsList
 
 urlpatterns = [
 
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     path("home/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path('services/', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
+    path('jobs/', include('jobs.urls')),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
@@ -19,15 +19,11 @@ urlpatterns = [
         "", TemplateView.as_view(template_name="veritas1/index.html"), name="homepage"
     ),
     path('resume/', include('applications.urls')),
-    path('jobs',JobsList.as_view(),name='jobs' ),
-    path('<slug:slug>/', JobsDetail.as_view(), name='jobs_detail'),
+   
 
 
-
-    path('services/', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
     path('contacts/', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
-    path('post/', PostList.as_view(), name='post_list'),
-    path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
+   
     path('login/', TemplateView.as_view(template_name='veritas1/login.html'), name='login_custom'),
 
 
