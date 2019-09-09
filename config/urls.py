@@ -9,15 +9,17 @@ urlpatterns = [
 
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
-    path("home/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path('services/', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
-    path('jobs/', include('jobs.urls')),
-    path(
-        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
-    ),
     path(
         "", TemplateView.as_view(template_name="veritas1/index.html"), name="homepage"
     ),
+    path("home/", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path('services/', TemplateView.as_view(template_name="veritas1/services.html"), name="services"),
+    path('jobs/', include('jobs.urls')),
+    path('events/', include('blog.urls')),
+    path(
+        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
+    ),
+   
     path('resume/', include('applications.urls')),
    
 
