@@ -231,13 +231,14 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		</div>
 		<!---728x90--->
 			<h1>Contact Us</h1>
-					<form method="post"  class='col-sm-6' style="margin-left:10px; margin-right:10px; padding:0 10px 0 10px">
+					<form method="post"  class='col-sm-6' enctype="multipart/form-data">
 					    {% csrf_token %}
 					    {{ form | crispy}}
 					    <div class="form-actions">
 					      <button type="submit">Send</button>
 					    </div>
 					</form>
+					{{form.attach}}
 
 		<div class="inner_sec_grids_info login-form">
 				<div class="col-md-6 form-center" style=''>

@@ -14,7 +14,7 @@ def emailView(request):
             message = form.cleaned_data['message']
             attach = request.FILES['attach']
             try:
-                send_mail(subject, message, from_email, ['admin@example.com'])
+                send_mail(subject, message,attach, from_email, ['admin@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
