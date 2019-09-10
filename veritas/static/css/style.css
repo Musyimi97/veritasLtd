@@ -490,7 +490,7 @@ label {
 /*-- /search --*/
 
 #search_form {
-	background: #23B684;
+	background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #245fc7 97.838894682%);
 	padding: 3em 2em;
 	text-align: center;
 }
@@ -826,7 +826,7 @@ h3.agile_heading.two {
 }
 
 .services-left-top:hover {
-	background: #23B684;
+	background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #23B684 97.838894682%);
 }
 
 .services-left-top:hover h5 {
@@ -2898,7 +2898,7 @@ h4.white-w3ls {
 /*-- footer --*/
 
 .footer_top_agileits {
-	background: #141415;
+	background: #071542;
 	padding: 4em 0;
 }
 
@@ -2907,7 +2907,7 @@ h4.white-w3ls {
 }
 
 .footer_w3ls {
-	background: #0f0f10;
+	background: #071542;
 }
 
 ul.tag2:last-child {
