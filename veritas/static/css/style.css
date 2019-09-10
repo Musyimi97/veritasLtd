@@ -490,7 +490,7 @@ label {
 /*-- /search --*/
 
 #search_form {
-	background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #245fc7 97.838894682%);
+	background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #23B684 97.838894682%);
 	padding: 3em 2em;
 	text-align: center;
 }
@@ -3531,7 +3531,7 @@ ul.social-icons3.two li a {
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
 	.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
-		color: #23b684;
+		color: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #23B684 97.838894682%);
 	}
 	.footer_bottom_grid:nth-child(2) {
 		float: left;
