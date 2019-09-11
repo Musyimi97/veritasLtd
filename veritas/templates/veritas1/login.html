@@ -87,44 +87,31 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 		<div class="content white agile-info">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container">
-					<div class="navbar-header">
+					<div class="navbar-header " >
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-						<a class="navbar-brand" href="index.html">
-							<h1><span class="fa fa-signal" aria-hidden="true"></span> Soft <label>Hr Agency</label></h1>
-						</a>
+				<a class="navbar-brand float-left mt-5" href="{% url 'homepage' %}">
+					<img src="{% static 'images/logo.png' %}" width="120" height='60' alt="veritas resourcing ltd">
+				  </a>
 					</div>
 					<!--/.navbar-header-->
-
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<nav class="link-effect-2" id="link-effect-2">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html" class="effect-3">Home</a></li>
-								<li class="dropdown">
-									<a href="services.html" class="dropdown-toggle effect-3" data-toggle="dropdown">Services <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="services.html">Services 2</a></li>
-										<li class="divider"></li>
-										<li><a href="services.html">Services 3</a></li>
-										<li class="divider"></li>
-										<li><a href="codes.html">Codes</a></li>
-										<li class="divider"></li>
-										<li><a href="icons.html">Icons</a></li>
-										<li class="divider"></li>
-										<li><a href="services.html">One more separated link</a></li>
-									</ul>
-								</li>
+								<li class="active"><a href="{% url 'homepage' %}" class="effect-3">Home</a></li>
+								<li><a href="{% url 'services' %}" class="effect-3">Services</a></li>
+
 								<li class="dropdown">
 									<a href="jobs.html" class="dropdown-toggle effect-3" data-toggle="dropdown">Jobs<b class="caret"></b></a>
 									<ul class="dropdown-menu multi-column columns-2">
 										<div class="row">
 											<div class="col-sm-6">
 												<ul class="multi-column-dropdown">
-													<li><a href="jobs.html">Walk-ins</a></li>
+													<li><a href="{% url 'jobs' %}">Walk-ins</a></li>
 													<li><a href="jobs.html">Bpo Jobs</a></li>
 													<li><a href="jobs.html">Teaching Jobs</a></li>
 													<li><a href="jobs.html">Diploma Jobs</a></li>
@@ -140,19 +127,52 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 											</div>
 											<div class="col-sm-6">
 												<ul class="multi-column-dropdown">
-													<li><a href="login.html">Recruiter Updates</a></li>
-													<li><a href="upload.html">Upload Resume</a></li>
-													<li><a href="codes.html">Shortcodes</a></li>
+													<li><a href="{% url 'post_list' %}">Recruiter Updates</a></li>
+													{% if request.user.is_authenticated %}
+														
+													<li><a href= "#">Upload Resume</a></li>
+													  
+													{% else %}
+													<li><a href="{% url 'account_login' %}"> Login To Upload Resume</a></li>
+													{% endif %}
+												
 												</ul>
 											</div>
 										</div>
 									</ul>
 								</li>
-								<li><a href="events.html" class="effect-3">Events</a></li>
+								<li><a href="{% url 'post_list' %}" class="effect-3">Events</a></li>
 
-								<li><a href="professional.html" class="effect-3">Profesionals</a></li>
-								<li><a href="contact.html" class="effect-3">Contact</a></li>
+								<li><a href="{% url 'email' %}" class="effect-3">Professionals</a></li>
+								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
+								{% if request.user.is_authenticated %}
+								<div class="pull-right">
+									<ul class="nav pull-right">
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, {{user.username}} <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><a href="{% url 'users:detail' request.user.username %}"><i class="fa fa-user"></i>My Profile</a></li>
+												<li class="divider"></li>
+												<li><a href="{% url 'account_logout' %}"><i class="fa fa-power-off"></i> Logout</a></li>
+											</ul>
+										</li>
+									</ul>
+								  </div>
+
+
+								{% else %}
+								<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_signup' %}" class="nav-link" title="settings">sign up</a></li>
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_login' %}" class="nav-link" title="settings">login</a></li>
+
+								
+								</ul>
+								  
+								{% endif %}
+								
+							
+								
 							</ul>
+
 						</nav>
 					</div>
 					<!--/.navbar-collapse-->

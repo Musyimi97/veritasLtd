@@ -120,7 +120,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 										<div class="row">
 											<div class="col-sm-6">
 												<ul class="multi-column-dropdown">
-													<li><a href="jobs.html">Walk-ins</a></li>
+													<li><a href="{% url 'jobs' %}">Walk-ins</a></li>
 													<li><a href="jobs.html">Bpo Jobs</a></li>
 													<li><a href="jobs.html">Teaching Jobs</a></li>
 													<li><a href="jobs.html">Diploma Jobs</a></li>
@@ -136,9 +136,15 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 											</div>
 											<div class="col-sm-6">
 												<ul class="multi-column-dropdown">
-													<li><a href="login.html">Recruiter Updates</a></li>
-													<li><a href="#></li>
-													<li><a href="codes.html">Shortcodes</a></li>
+													<li><a href="{% url 'post_list' %}">Recruiter Updates</a></li>
+													{% if request.user.is_authenticated %}
+														
+													<li><a href= "#">Upload Resume</a></li>
+													  
+													{% else %}
+													<li><a href="{% url 'account_login' %}"> Login To Upload Resume</a></li>
+													{% endif %}
+												
 												</ul>
 											</div>
 										</div>
@@ -146,7 +152,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								</li>
 								<li><a href="{% url 'post_list' %}" class="effect-3">Events</a></li>
 
-								<li><a href="professional.html" class="effect-3">Professionals</a></li>
+								<li><a href="{% url 'email' %}" class="effect-3">Professionals</a></li>
 								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 								{% if request.user.is_authenticated %}
 								<div class="pull-right">
