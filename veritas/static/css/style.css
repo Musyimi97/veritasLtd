@@ -2864,7 +2864,7 @@ h4.white-w3ls {
 }
 
 .agile_info_mail_img {
-	background: url(../images/contact.jpg) no-repeat 0px 0px;
+	background: white no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

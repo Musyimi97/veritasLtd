@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -256,28 +257,19 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					</div>
 				</div>
 				<div class="col-md-8 agile_info_mail_img">
-
+						<form method="post">
+								{% csrf_token %}
+								{{ form|crispy }}
+								<div class="form-actions">
+								  <button class="btn btn-success btn-lg" type="submit">Send</button>
+								</div>
+							</form>
 				</div>
 			</div>
 				<div class="clearfix"> </div>
 				<!---728x90--->
 
-				<div class="w3layouts_mail_grid">
-					<form action="#" method="post">
-						<div class="col-md-6 wthree_contact_left_grid">
-							<input type="text" name="Name" placeholder="Name" required="">
-							<input type="email" name="Email" placeholder="Email" required="">
-							<input type="text" name="Telephone" placeholder="Telephone" required="">
-							<input type="text" name="Subject" placeholder="Subject" required="">
-						</div>
-						<div class="col-md-6 wthree_contact_left_grid">
-							<textarea name="Message" placeholder="Message..." required=""></textarea>
-							<input type="submit" value="Submit">
-						</div>
-						<div class="clearfix"> </div>
-
-					</form>
-				</div>
+			
 
 
 			</div>

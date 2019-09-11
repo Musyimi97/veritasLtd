@@ -23,8 +23,8 @@ urlpatterns = [
     path('resume/', include('applications.urls')),
    
 
+    path('contacts/', include('contactform.urls')),
 
-    path('contacts/', TemplateView.as_view(template_name="veritas1/contact.html"), name="contact"),
    
     path('login/', TemplateView.as_view(template_name='veritas1/login.html'), name='login_custom'),
 
