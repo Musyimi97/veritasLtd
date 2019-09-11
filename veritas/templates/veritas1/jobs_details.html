@@ -190,7 +190,6 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	</div>
 	<!-- banner -->
 	<div class="inner_page_agile">
-		<h3>Jobs</h3>
 
 	</div>
 	<!--//banner -->
@@ -200,7 +199,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 			<ul class="short_w3ls"_w3ls>
 				<li><a href="index.html">Home</a><span>|</span></li>
-				<li>Location Single</li>
+				<li>{{jobs.slug}}</li>
 			</ul>
 		</div>
 	</div>
@@ -211,7 +210,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 			<!---728x90--->
 
 			<div class="tittle_head_w3ls">
-				<h3 class="tittle">Single Page </h3>
+				<h3 class="tittle">{{object.title}}</h3>
 			</div>
 			<!---728x90--->
 
@@ -220,8 +219,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					<div class="but_list">
 						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 							<ul id="myTab" class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Top Locations</a></li>
-								<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Show Descriptions</a></li>
+								<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{{jobs.location}}</a></li>
 							</ul>
 							<div id="myTabContent" class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
@@ -229,384 +227,39 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 										<div class="col-sm-3 loc_1">
 											<a href="location_single.html"><img src="images/loc6.jpg" alt=""></a>
 										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">03 <span>Nov</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-													{% for jobs in jobs_detail %}
-													  
-													
-													<p><div class="container">
-														<div class="row">
-														  <div class="col-md-8 card mb-4  mt-3 left  top">
-															<div class="card-body">
-															  <h1>{{ jobs.title }} </h1>
-															  <p class=" text-muted">{{ jobs.author }} | {{ jobs.created_on }}</p>
-															  <p class="card-text ">{{ jobs.content | safe }}</p>
-															</div>
-														  </div>
-														</div>
-													  </div>
-													  .</p>
-													  {% endfor %}
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
+									
 										<div class="clearfix"> </div>
 									</div>
+							
+									
 									<div class="tab_grid">
 										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc5.jpg" alt=""></a>
 										</div>
 										<div class="col-sm-9">
 											<div class="jobs_right">
-												<div class="date">23 <span>Nov</span></div>
 												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
+													<h2 class="title"><b>{{object.title}}</b></h2>
+													<span class="meta"> <label for="location"> {{jobs.location}} | {{jobs.created_on}}</label> </span>
 												</div>
 
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
+												<p class="description">{{object.content | safe}}</p>
 
 												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
+												
 												</ul>
 												<div class="clearfix"> </div>
 											</div>
 										</div>
 										<div class="clearfix"> </div>
 									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc7.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">01 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc8.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">13 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc5.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">14 <span>Nov</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc7.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">20 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid last">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc8.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">30 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
+								
 
 								</div>
-								<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc4.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">03 <span>Nov</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc5.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">23 <span>Nov</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc7.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">01 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc8.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">13 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc8.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">14 <span>Nov</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc5.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">20 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="tab_grid last">
-										<div class="col-sm-3 loc_1">
-											<a href="location_single.html"><img src="images/loc8.jpg" alt=""></a>
-										</div>
-										<div class="col-sm-9">
-											<div class="jobs_right">
-												<div class="date">30 <span>Dec</span></div>
-												<div class="date_desc">
-													<h6 class="title"><a href="single.html">Front-end Developer</a></h6>
-													<span class="meta">Franisco Da Silva</span>
-												</div>
-
-												<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus
-													similique aliquid a dolores autem laudantium sapiente.</p>
-												<div class="read"><a href="single.html" class="read-more">Read More</a></div>
-
-												<ul class="top-btns">
-													<li><a href="#" class="fa fa-plus toggle"></a></li>
-													<li><a href="#" class="fa fa-star"></a></li>
-													<li><a href="#" class="fa fa-link"></a></li>
-												</ul>
-												<div class="clearfix"> </div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
+							
+								
+							
+								
+								
 
 								</div>
 							</div>
@@ -614,170 +267,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 job_info_right">
-
-				<div class="widget_search">
-					<h5 class="widget-title">Search</h5>
-					<div class="widget-content">
-						<span>I'm looking for a ...</span>
-						<select class="form-control jb_1">
-					<option value="0">Job</option>
-					<option value="">Category</option>
-					<option value="">Category</option>
-					<option value="">Category</option>
-					<option value="">Category</option>
-				</select>
-						<span>in</span>
-						<input type="text" class="form-control jb_2" placeholder="Location">
-						<input type="text" class="form-control jb_2" placeholder="Industry / Role">
-						<input type="submit" value="Search">
-					</div>
-				</div>
-				<div class="col_3 permit">
-					<h3>Jobs by Category</h3>
-					<ul class="list_2">
-						<li><a href="#">Railway Recruitment</a></li>
-						<li><a href="#">Air Force Jobs</a></li>
-						<li><a href="#">Police Jobs</a></li>
-						<li><a href="#">Intelligence Bureau Jobs</a></li>
-						<li><a href="#">Army Jobs</a></li>
-						<li><a href="#">Navy Jobs</a></li>
-						<li><a href="#">BSNL Jobs</a></li>
-						<li><a href="#">Software Jobs</a></li>
-						<li><a href="#">Research Jobs</a></li>
-					</ul>
-				</div>
-				<div class="col_3 experience">
-					<h3>Work Experiance</h3>
-					<table class="table">
-						<tbody>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Senior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Middle
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Junior
-								</td>
-								<td>
-									(56)
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col_3 permit">
-					<h3>Work Permit</h3>
-					<table class="table">
-						<tbody>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Full time
-								</td>
-							</tr>
-							<tr class="unread checked">
-								<td class="hidden-xs">
-									<input type="checkbox" class="checkbox">
-								</td>
-								<td class="hidden-xs">
-									Part time
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-			</div>
+		
 			<div class="clearfix"></div>
 			<!---728x90--->
 
