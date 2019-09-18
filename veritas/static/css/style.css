@@ -147,14 +147,14 @@ label {
 
 .navbar {
 	position: relative;
-	min-height: 50px;
+	min-height: 120px;
 	margin-bottom: 0!important;
 	border: 1px solid transparent;
 }
 
 .navbar-default {
-	background-color: #fff;
-	border-color: #fff;
+	background-color: #3C8476;
+	border-color: #3C8476;
 }
 
 .navbar-brand {
@@ -173,7 +173,7 @@ label {
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #282828;
+	color: #ffffff;
 	font-size: 0.8em;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -2898,7 +2898,7 @@ h4.white-w3ls {
 /*-- footer --*/
 
 .footer_top_agileits {
-	background: #071542;
+	background: #232323;
 	padding: 4em 0;
 }
 
@@ -2907,7 +2907,7 @@ h4.white-w3ls {
 }
 
 .footer_w3ls {
-	background: #071542;
+	background: #232323;
 }
 
 ul.tag2:last-child {
