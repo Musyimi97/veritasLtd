@@ -153,8 +153,8 @@ label {
 }
 
 .navbar-default {
-	background-color: #3C8476;
-	border-color: #3C8476;
+	background-color: #ffffff;
+	border-color: #ffffff;
 }
 
 .navbar-brand {
@@ -173,7 +173,7 @@ label {
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #ffffff;
+	color: #000000;
 	font-size: 0.8em;
 	letter-spacing: 1px;
 	font-weight: 600;

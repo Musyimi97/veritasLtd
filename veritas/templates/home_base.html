@@ -105,13 +105,14 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand float-left mt-5" href="{% url 'homepage' %}">
-					<img src="{% static 'images/logo.png' %}" width="150px" height='60px' alt="veritas resourcing ltd">
+					<img src="{% static 'images/logo.png' %}" width="150px" height='120px' alt="veritas resourcing ltd">
 				  </a>
 					</div>
 					<!--/.navbar-header-->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<nav class="link-effect-2" id="link-effect-2">
-							<ul class="nav navbar-nav">
+							<ul class="nav navbar-nav mt-l-5">
+								<br>
 								<li class="active"><a href="{% url 'homepage' %}" class="effect-3">Home</a></li>
 								<li><a href="{% url 'services' %}" class="effect-3">Services</a></li>
 
@@ -157,7 +158,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<li><a href="{% url 'contact' %}" class="effect-3">Contact</a></li>
 								{% if request.user.is_authenticated %}
 								<div class="pull-right">
-									<ul class="nav pull-right">
+									<ul class="nav navbar-nav">
 										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, {{user.username}} <b class="caret"></b></a>
 											<ul class="dropdown-menu">
 												<li><a href="{% url 'users:detail' request.user.username %}"><i class="fa fa-user"></i>My Profile</a></li>
@@ -171,8 +172,8 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 								{% else %}
 								<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_signup' %}" class="nav-link" title="settings">sign up</a></li>
-									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_login' %}" class="nav-link" title="settings">login</a></li>
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_signup' %}" class="effect-3 nav-link" title="settings">sign up</a></li>
+									<li class="nav-item order-2 order-md-1"><a href="{% url 'account_login' %}" class="effect-3 nav-link" title="settings">login</a></li>
 
 								
 								</ul>
