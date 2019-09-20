@@ -37,3 +37,18 @@ class Jobs(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+class Application(models.Model):
+    email= models.EmailField()
+    subject =models.CharField(max_length=100)
+    message =models.CharField(max_length=30)
+    document = models.FileField(upload_to='documents/')
+    def __str__(self):
+        self.email
+
+    class Meta:
+        managed = True
+        verbose_name = 'Application'
+        verbose_name_plural = 'Applications'
