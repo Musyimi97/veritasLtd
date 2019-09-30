@@ -115,43 +115,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 								<br>
 								<li class="active"><a href="{% url 'homepage' %}" class="effect-3">Home</a></li>
 								<li><a href="{% url 'services' %}" class="effect-3">Services</a></li>
-
-								<li class="dropdown">
-									<a href="jobs.html" class="dropdown-toggle effect-3" data-toggle="dropdown">Jobs<b class="caret"></b></a>
-									<ul class="dropdown-menu multi-column columns-2">
-										<div class="row">
-											<div class="col-sm-6">
-												<ul class="multi-column-dropdown">
-													<li><a href="{% url 'jobs' %}">Walk-ins</a></li>
-													<li><a href="jobs.html">Bpo Jobs</a></li>
-													<li><a href="jobs.html">Teaching Jobs</a></li>
-													<li><a href="jobs.html">Diploma Jobs</a></li>
-													<li><a href="jobs.html">Tech Support</a></li>
-													<li><a href="jobs.html">Finance Jobs</a></li>
-													<li><a href="jobs.html">Part time Jobs</a></li>
-													<li><a href="jobs.html">Health Care</a></li>
-													<li><a href="jobs.html">Hospitality</a></li>
-													<li><a href="jobs.html">Internships</a></li>
-													<li><a href="jobs.html">Research Jobs</a></li>
-													<li><a href="jobs.html">Defence Jobs</a></li>
-												</ul>
-											</div>
-											<div class="col-sm-6">
-												<ul class="multi-column-dropdown">
-													<li><a href="{% url 'post_list' %}">Recruiter Updates</a></li>
-													{% if request.user.is_authenticated %}
-														
-													<li><a href= "#">Upload Resume</a></li>
-													  
-													{% else %}
-													<li><a href="{% url 'account_login' %}"> Login To Upload Resume</a></li>
-													{% endif %}
-												
-												</ul>
-											</div>
-										</div>
-									</ul>
-								</li>
+								<li><a href="{% url 'jobs' %}">Jobs</a></li>
 								<li><a href="{% url 'post_list' %}" class="effect-3">Events</a></li>
 
 								<li><a href="{% url 'email' %}" class="effect-3">Professionals</a></li>

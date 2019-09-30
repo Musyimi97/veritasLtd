@@ -1,6 +1,5 @@
-from .models import Application
 from django import forms
-
+from .models import Application
 
 class ApplicationForm(forms.ModelForm):
     email = forms.EmailField(max_length=200,widget=forms.TextInput(attrs={'class': "form-control",'id': "clientemail"}))

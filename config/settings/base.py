@@ -3,6 +3,7 @@ Base settings to build other settings files upon.
 """
 
 import environ
+import os
 
 ROOT_DIR = (
     environ.Path(__file__) - 3
@@ -213,6 +214,14 @@ EMAIL_BACKEND = env(
 )
 # https://docs.djangoproject.com/en/2.2/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
+
+SENDGRID_API_KEY = os.getenv('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')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 35202
+EMAIL_USE_TLS = False
 
 # ADMIN
 # ------------------------------------------------------------------------------

@@ -41,7 +41,7 @@ class Jobs(models.Model):
 
 
 class Application(models.Model):
-    email= models.EmailField()
+    from_email= models.EmailField()
     subject =models.CharField(max_length=100)
     message =models.CharField(max_length=30)
     document = models.FileField(upload_to='documents/')
