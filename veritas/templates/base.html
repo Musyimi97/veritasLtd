@@ -48,6 +48,11 @@
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'services' %}" >Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'jobs' %}">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'post_list' %}" >Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'email' %}" >Professionals</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}" >Contact</a></li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="{% url 'about' %}">About</a>
             </li> -->
@@ -85,7 +90,6 @@
       {% endif %}
 
       {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
       {% endblock content %}
 
     </div> <!-- /container -->

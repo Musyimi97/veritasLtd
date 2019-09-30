@@ -56,12 +56,12 @@ def email(request):
             from_email = request.POST.get('from_email')
             document = request.FILES.get('document')
             try:
-                mail=EmailMessage(subject, message, from_email, ['info@veritas.ke'])
+                mail=EmailMessage(subject, message, from_email, ['collinsmusyimi.cm@gmail.com'])
                 mail.attach('resume.pdf', document.read(), 'application/pdf')
                 mail.send()
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return HttpResponseRedirect('/home',  {'message': 'Sent email to %s'%'info@veritas.ke'})
+            return HttpResponseRedirect('',  {'message': 'Sent email to %s'%'collinsmusyimi.cm@gmail.com'})
     else:
         form= ApplicationForm()
         return render(request, 'veritas1/application.html', {'form':form})
