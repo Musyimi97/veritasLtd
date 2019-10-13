@@ -28,7 +28,6 @@ CACHES = {
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-host
 EMAIL_HOST = env("EMAIL_HOST", default='smtp.sendgrid.net')
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-port
-EMAIL_PORT = 587
 
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
