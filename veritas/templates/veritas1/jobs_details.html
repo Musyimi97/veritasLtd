@@ -67,7 +67,8 @@ if(typeof _bsa !== 'undefined' && _bsa) {
   		// format, zoneKey, segment:value, options
   		_bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
   	}
-})();
+})();													<li><a href="{% url 'jobs_detail' jobs.slug %}"><i class="fa fa-eye icon_1"> </i> <span class="icon_text">View full Job Description</span></a></li>
+
 </script>
 <script type="text/javascript" src="{% static 'http://services.bilsyndication.com/adv1/?d=353' %} " defer="" async=""></script><script> var vitag = vitag || {};vitag.gdprShowConsentTool=false;vitag.outStreamConfig = {type: "slider", position: "left" };</script>
 
@@ -146,9 +147,10 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 												</div>
 
 												<p class="description">{{object.content | safe}}</p>
-
+<hr>
 												<ul class="top-btns">
-												
+													<a href="{% url 'application' %}" class="float-right" ><button class="btn btn-primary btn-sm"> Apply Now <i class="fa fa-caret-right"></i></button> </a>
+
 												</ul>
 												<div class="clearfix"> </div>
 											</div>
