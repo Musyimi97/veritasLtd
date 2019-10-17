@@ -1,12 +1,5 @@
 # General
-SENDGRID_API_KEY = os.getenv('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')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
-EMAIL_PORT = 35202
-EMAIL_USE_TLS = False
-EMAIL_PORT = 587
 
 # ------------------------------------------------------------------------------
 USE_DOCKER=yes
