@@ -8,14 +8,18 @@ from django.conf import settings
 from django.utils.timezone import timezone
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 
 
 from .models import Jobs
 
 class JobsList(generic.ListView):
+    model= Jobs
     queryset = Jobs.objects.filter(status=1).order_by('-created_on')
     template_name = 'veritas1/jobs.html'
+    paginate_by=4
 
 class JobsDetail(generic.DetailView):
     model = Jobs
