@@ -114,7 +114,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 			<!---728x90--->
 
 			<div class="tittle_head_w3ls">
-				<h3 class="tittle">Our Events</h3>
+				<h3 class="tittle"><u> Our Events </u></h3>
 			</div>
 			<!---728x90--->
 		
@@ -133,12 +133,36 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 									<a href="single.html" ><img src="{{ post.cover.url}}" alt="{{ post.title }}" style="width: 300px; height:150px;"></a>
 									<h2 class="card-title">{{ post.title }}</h2>
 									<p class="card-text text-muted h6">{{ post.Author }} | {{ post.created_on}} </p>
-									<p class="card-text">{{post.content|slice:":200" }}</p>
+									<p class="card-text">{{post.content|slice:":200" }}</p><br>
 									<a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
 								</div>
+								<br>
+								<hr>
+								<h6><u> View More Jobs </u></h6>
 							</div>
 							{% endfor %}
 						</div>
+						{% if is_paginated %}
+						<ul class="pagination">
+						  {% if page_obj.has_previous %}
+							<li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+						  {% else %}
+							<li class="disabled"><span>&laquo;</span></li>
+						  {% endif %}
+						  {% for i in paginator.page_range %}
+							{% if page_obj.number == i %}
+							  <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+							{% else %}
+							  <li><a href="?page={{ i }}">{{ i }}</a></li>
+							{% endif %}
+						  {% endfor %}
+						  {% if page_obj.has_next %}
+							<li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+						  {% else %}
+							<li class="disabled"><span>&raquo;</span></li>
+						  {% endif %}
+						</ul>
+					  {% endif %}
 						
 										 
 									 </div>
