@@ -1,19 +1,37 @@
 {% extends 'home_base.html' %}
-<h1>Search Page</h1>
+{% load static %}
 
-<br/>
+{% block title %}
+    Search results  | {{ request.GET.q }}
+{% endblock title %}
+    
+{% block css %}
+   
+<!-- ==Bootie Cdn start=== -->
+<link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' %} " rel="stylesheet" id="bootstrap-css">
+<script src="{% static '//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' %} "></script>
+<script src="{% static '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js' %} "></script>
+<!-- ===End==== -->
+<!--//tags -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
+
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<!-- //for bootstrap working -->
+<link href="{% static 'http://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700' %} " rel="stylesheet">
+<link href='{% static "http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic" %} '
+    rel='stylesheet' type='text/css'>
+       
+    {% endblock css %}
+
+    
 
 {% block content %}
-    
-    
-<form action="{% url 'searchposts' %}" method="GET" value="{{request.GET.q}}">
-Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts"/>
-<input type="submit" name="submit" value="Search"/>
-</form>
 
 
 {% if submitbutton == 'Search' and request.GET.q != '' %}
 {% if results %}
+<div class="container">
 <h1>Results for <b>{{ request.GET.q }}</b></h1>
 <br/><br/>
 
@@ -24,10 +42,26 @@ Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search
 
 {{result.content}}
 <br/>
-
+</div>
 {% endfor %}
 {% else %}
-No search results for this query
+<div class="alert alert-warning justify-content-center" role="alert">
+    Oops!! <br> No similar keywords found, try again later or visits
+     <a href="{% url 'jobs' %}" class="alert-link">jobs</a>.
+  </div>
+  {% endif %}
 {% endif %}
-{% endif %}
+
+<br>
+<br><br><br>
 {% endblock content %}
+
+{% block js %}
+      
+
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %} "></script>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %} "></script>
+{% endblock js %}
+
+    

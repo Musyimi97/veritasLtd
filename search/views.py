@@ -21,4 +21,4 @@ def searchposts(request):
             return render(request, 'veritas1/search.html')
 
     else:
-        return render(request, 'veritas1/search.html')
+        return render(request, 'veritas1/index.html')
