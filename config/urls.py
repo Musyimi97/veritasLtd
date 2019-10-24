@@ -28,7 +28,7 @@ urlpatterns = [
    
     path('login/', TemplateView.as_view(template_name='veritas1/login.html'), name='login_custom'),
 
-
+    path('', include('search.urls')),
     # User management
     path("users/", include("veritas.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
