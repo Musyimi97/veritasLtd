@@ -1379,7 +1379,7 @@ p.reg {
 
 .inner_page_agile {
 	text-align: center;
-	background: linear-gradient(to right, #1fb5ace6 50%, black 15%, white ) no-repeat 0px 0px;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI2.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
