@@ -240,7 +240,7 @@ texinfo_documents = [
         "Veritas Documentation",
         """collins|laban""",
         "Veritas",
-        """Official Website for Veritas.co.ke""",
+        """Official Website for Veritas.ke""",
         "Miscellaneous",
     )
 ]
