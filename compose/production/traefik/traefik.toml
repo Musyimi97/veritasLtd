@@ -1,5 +1,5 @@
 logLevel = "INFO"
-defaultEntryPoints = ["http", "https"]
+defaultEntryPoints = ["http"]
 
 # Entrypoints, http and https
 [entryPoints]
@@ -16,9 +16,9 @@ defaultEntryPoints = ["http", "https"]
 # Enable ACME (Let's Encrypt): automatic SSL
 [acme]
 # Email address used for registration
-email = "info@veritas.ke"
+email = "labankiplagat81@gmail.com"
 storage = "/etc/traefik/acme/acme.json"
-entryPoint = "https"
+entryPoint = "http"
 onDemand = false
 OnHostRule = true
   # Use a HTTP-01 acme challenge rather than TLS-SNI-01 challenge
