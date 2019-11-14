@@ -9,7 +9,7 @@ pylint = "*"
 [packages]
 pytz = "==2019.2"
 python-slugify = "==3.0.3"
-pillow = "==6.1.0"
+pillow = "==6.2.0"
 argon2-cffi = "==19.1.0"
 whitenoise = "==4.1.3"
 redis = "==3.3.4"
