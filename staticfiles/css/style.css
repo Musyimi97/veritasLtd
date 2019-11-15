@@ -147,14 +147,14 @@ label {
 
 .navbar {
 	position: relative;
-	min-height: 50px;
+	min-height: 120px;
 	margin-bottom: 0!important;
 	border: 1px solid transparent;
 }
 
 .navbar-default {
-	background-color: #fff;
-	border-color: #fff;
+	background-color: #ffffff;
+	border-color: #ffffff;
 }
 
 .navbar-brand {
@@ -173,7 +173,7 @@ label {
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #282828;
+	color: #000000;
 	font-size: 0.8em;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -351,34 +351,34 @@ label {
 /*-- banner --*/
 
 .carousel .item {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner1.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner1.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner1.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner1.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI2.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI2.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI2.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI2.jpg) no-repeat;
 	background-size: cover;
 }
 
 .carousel .item.item2 {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI6.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI6.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI6.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI6.jpg) no-repeat;
 	background-size: cover;
 }
 
 .carousel .item.item3 {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI8.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI8.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI8.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI8.jpg) no-repeat;
 	background-size: cover;
 }
 
 .carousel .item.item4 {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI1.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI1.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI1.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI1.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -490,7 +490,7 @@ label {
 /*-- /search --*/
 
 #search_form {
-	background: #23B684;
+	background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #23B684 97.838894682%);
 	padding: 3em 2em;
 	text-align: center;
 }
@@ -635,10 +635,10 @@ ul.some_agile_facts label {
 /*-- //banner_bottom--*/
 
 .team_work_agile {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritasO.png) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritasO.png) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritasO.png) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritasO.png) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritas4.jpeg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritas4.jpeg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritas4.jpeg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/veritas4.jpeg) no-repeat;
 	background-size: cover;
 	min-height: 350px;
 }
@@ -826,7 +826,7 @@ h3.agile_heading.two {
 }
 
 .services-left-top:hover {
-	background: #23B684;
+	background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #23B684 97.838894682%);
 }
 
 .services-left-top:hover h5 {
@@ -1089,7 +1089,7 @@ h3.tittle.two {
 /*-- //login --*/
 
 .candidate_cv {
-	background: url(../images/candidate.jpg) no-repeat 0px 0px;
+	background: #23B684 no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -1379,7 +1379,7 @@ p.reg {
 
 .inner_page_agile {
 	text-align: center;
-	background: url(../images/candidate.jpg) no-repeat 0px 0px;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/VERI2.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -2864,7 +2864,7 @@ h4.white-w3ls {
 }
 
 .agile_info_mail_img {
-	background: url(../images/contact.jpg) no-repeat 0px 0px;
+	background: white no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -2898,7 +2898,7 @@ h4.white-w3ls {
 /*-- footer --*/
 
 .footer_top_agileits {
-	background: #141415;
+	background: #232323;
 	padding: 4em 0;
 }
 
@@ -2907,7 +2907,7 @@ h4.white-w3ls {
 }
 
 .footer_w3ls {
-	background: #0f0f10;
+	background: #232323;
 }
 
 ul.tag2:last-child {
@@ -3531,7 +3531,7 @@ ul.social-icons3.two li a {
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
 	.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
-		color: #23b684;
+		color: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #23B684 97.838894682%);
 	}
 	.footer_bottom_grid:nth-child(2) {
 		float: left;
