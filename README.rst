@@ -1,7 +1,7 @@
 Veritas
 =======
 
-Official Website for Veritas.co.ke
+Official Website for Veritas.ke
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
