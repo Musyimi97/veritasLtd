@@ -56,7 +56,6 @@ INSTALLED_APPS += ["django_extensions"]  # noqa F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-<<<<<<< HEAD
 
 # STORAGES
 # ------------------------------------------------------------------------------
@@ -103,5 +102,3 @@ class MediaRootS3Boto3Storage(S3Boto3Storage):
 # endregion
 DEFAULT_FILE_STORAGE = "config.settings.production.MediaRootS3Boto3Storage"
 MEDIA_URL = f"https://veritasofficiall.s3.amazonaws.com/media/"
-=======
->>>>>>> 8e4539a79e77fad2253571fd5c73dcde1e20d1d1
