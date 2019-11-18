@@ -4,14 +4,14 @@ from .base import env
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
-DEBUG = True
+DEBUG = False
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env(
     "DJANGO_SECRET_KEY",
     default="SepOiQv4tgo7DlDzc476kAPR6w2G5pwx0iCvvdSW1wwc0qevu5vengis9pbtzFwP",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS =['*']
 
 # CACHES
 # ------------------------------------------------------------------------------
@@ -56,6 +56,7 @@ INSTALLED_APPS += ["django_extensions"]  # noqa F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+<<<<<<< HEAD
 
 # STORAGES
 # ------------------------------------------------------------------------------
@@ -102,3 +103,5 @@ class MediaRootS3Boto3Storage(S3Boto3Storage):
 # endregion
 DEFAULT_FILE_STORAGE = "config.settings.production.MediaRootS3Boto3Storage"
 MEDIA_URL = f"https://veritasofficiall.s3.amazonaws.com/media/"
+=======
+>>>>>>> 8e4539a79e77fad2253571fd5c73dcde1e20d1d1
